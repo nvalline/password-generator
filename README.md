@@ -55,7 +55,7 @@ Copyright (c) [2020][nate valline]
 
 ---
 
-## Contributors
+## Authors
 
 - Nate Valline
 
