@@ -5,27 +5,27 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChars = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
-var question1 = "Enter the number of characters desired for the password (8 - 128)";
-var question2 = "Do you want lowercase characters? 'OK' for yes, 'Cancel' for no.";
-var question3 = "Do you want uppercase characters? 'OK' for yes, 'Cancel' for no.";
-var question4 = "Do you want numeric characters? 'OK' for yes, 'Cancel' for no.";
-var question5 = "Do you want special characters? 'OK' for yes, 'Cancel' for no.";
+var questionLength = "Enter the number of characters desired for the password (8 - 128)";
+var questionLower = "Do you want lowercase characters? 'OK' for yes, 'Cancel' for no.";
+var questionUpper = "Do you want uppercase characters? 'OK' for yes, 'Cancel' for no.";
+var questionNum = "Do you want numeric characters? 'OK' for yes, 'Cancel' for no.";
+var questionSpecChar = "Do you want special characters? 'OK' for yes, 'Cancel' for no.";
 
 // Write password to the #password input
 function writePassword() {
   function generatePassword() {
 
     // conditional for character length
-    var charLength = prompt(question1);
+    var charLength = prompt(questionLength);
 
     if (charLength >= 8 && charLength <= 128) {
       charLength;
     } else {
-      charLength = prompt(question1);
+      charLength = prompt(questionLength);
     }
 
     // conditional for alphabet lowercase
-    prompt(question2);
+    prompt(questionLower);
 
     console.log(charLength);
   }
