@@ -1,8 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var alphabet = "abcdefghijklmnopqrstuvwxyz";
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var alphabetLower = "abcdefghijklmnopqrstuvwxyz";
+var alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
 var specialChars = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
 var questionLength = "Enter the number of characters desired for the password (8 - 128)";
@@ -27,7 +28,7 @@ function writePassword() {
     // conditional for alphabet lowercase
     prompt(questionLower);
 
-    console.log(charLength);
+    console.log(alphabet + specialChars);
   }
 
   var password = generatePassword();
