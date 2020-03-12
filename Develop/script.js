@@ -27,11 +27,15 @@ function writePassword() {
       charLength = prompt(questionLength);
     }
 
-    // Gather password option choices
-    var answerQuestionLower = confirm(questionLower);
-    var answerQuestionUpper = confirm(questionUpper);
-    var answerQuestionNum = confirm(questionSpecChar);
-    var answerQuesitonSpecChar = confirm(questionSpecChar);
+    // Validate at least one option is true
+    do {
+      var answerQuestionLower = confirm(questionLower);
+      var answerQuestionUpper = confirm(questionUpper);
+      var answerQuestionNum = confirm(questionNum);
+      var answerQuesitonSpecChar = confirm(questionSpecChar);
+    } while (answerQuestionLower !== true && answerQuestionUpper !== true && answerQuestionNum !== true && questionSpecChar !== true);
+
+    // if (answerQuestionLower)
 
 
     console.log(charLength);
