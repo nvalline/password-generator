@@ -28,14 +28,17 @@ function writePassword() {
     }
 
     // Gather password option choices
-    var answerQuestionLower = prompt(questionLower);
-    var answerQuestionUpper = prompt(questionUpper);
-    var answerQuestionNum = prompt(questionSpecChar);
-    var answerQuesitonSpecChar = prompt(questionSpecChar);
+    var answerQuestionLower = confirm(questionLower);
+    var answerQuestionUpper = confirm(questionUpper);
+    var answerQuestionNum = confirm(questionSpecChar);
+    var answerQuesitonSpecChar = confirm(questionSpecChar);
 
-    prompt(questionLower);
 
     console.log(charLength);
+    console.log(answerQuestionLower);
+    console.log(answerQuestionUpper);
+    console.log(answerQuestionNum);
+    console.log(answerQuesitonSpecChar);
   }
 
   var password = generatePassword();
