@@ -14,12 +14,16 @@ var questionUpper = "Do you want uppercase characters? 'OK' for yes, 'Cancel' fo
 var questionNum = "Do you want numeric characters? 'OK' for yes, 'Cancel' for no.";
 var questionSpecChar = "Do you want special characters? 'OK' for yes, 'Cancel' for no.";
 
+var charLength;
+var answerString = "";
+var randomized;
+
 // Write password to the #password input
 function writePassword() {
   function generatePassword() {
 
     // conditional for character length
-    var charLength = prompt(questionLength);
+    charLength = prompt(questionLength);
 
     if (charLength >= 8 && charLength <= 128) {
       charLength;
@@ -27,23 +31,43 @@ function writePassword() {
       charLength = prompt(questionLength);
     }
 
+    // console.log(charLength);
+
     // Validate at least one option is true
     do {
       var answerQuestionLower = confirm(questionLower);
       var answerQuestionUpper = confirm(questionUpper);
       var answerQuestionNum = confirm(questionNum);
-      var answerQuesitonSpecChar = confirm(questionSpecChar);
+      var answerQuestionSpecChar = confirm(questionSpecChar);
     } while (answerQuestionLower !== true && answerQuestionUpper !== true && answerQuestionNum !== true && questionSpecChar !== true);
 
-    // if (answerQuestionLower)
+    // Concat characters
+    if (answerQuestionLower) {
+      answerString = answerString + alphabetLower;
+    }
+    if (answerQuestionUpper) {
+      answerString = answerString + alphabetUpper;
+    }
+    if (answerQuestionNum) {
+      answerString = answerString + numbers;
+    }
+    if (answerQuestionSpecChar) {
+      answerString = answerString + specialChars;
+    }
 
+    // console.log(answerString);
 
-    console.log(charLength);
-    console.log(answerQuestionLower);
-    console.log(answerQuestionUpper);
-    console.log(answerQuestionNum);
-    console.log(answerQuesitonSpecChar);
+    // Loop for password
+    randomized = "";
+
+    for (var i = 0; i < charLength; i++) {
+      randomized = answerString[Math.floor(Math.random() * answerString.length)];
+    }
+
+    return randomized;
   }
+
+  console.log(randomized);
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
