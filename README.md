@@ -83,7 +83,7 @@ button[disabled] {
 
 ## License
 
-Copyright (c) [2020][nate valline]
+Copyright (c) 2020 Nate Valline
 
 [Back To The Top](#project-name)
 
