@@ -1,8 +1,8 @@
 ### Project Name
 
-# Nate Valline's Portfolio
+# Password Generator
 
-<img src="../Assets/passwordgen.png" width="600px">
+<img src="./Assets/passwordgen.png" width="600px">
 
 > Short Project Blurb
 
