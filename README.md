@@ -42,10 +42,28 @@ All functionality is javascript based.
 
 #### Installation
 
+Open this link to view the Password Generator.
+
 #### API Reference
 
+```javascript
+do {
+        var answerQuestionLower = confirm(questionLower);
+        var answerQuestionUpper = confirm(questionUpper);
+        var answerQuestionNum = confirm(questionNum);
+        var answerQuestionSpecChar = confirm(questionSpecChar);
+    } while (answerQuestionLower !== true && answerQuestionUpper !== true && answerQuestionNum !== true && questionSpecChar !== true);
+```
 ```html
-<p>dummy code</p>
+<div class="card-body">
+    <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+</div>
+```
+```css
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
 ```
 
 [Back To The Top](#project-name)
