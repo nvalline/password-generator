@@ -1,4 +1,8 @@
-![Project Image](project-image-url)
+### Project Name
+
+# Nate Valline's Portfolio
+
+<img src="../Assets/passwordgen.png" width="600px">
 
 > Short Project Blurb
 
