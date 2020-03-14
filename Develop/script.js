@@ -35,12 +35,10 @@ function writePassword() {
         var answerQuestionSpecChar = confirm(questionSpecChar);
       } while (answerQuestionLower !== true && answerQuestionUpper !== true && answerQuestionNum !== true && questionSpecChar !== true);
     } else {
-      // charLength = prompt(questionLength);
       var defaultText = "Please enter a valid number in prompt to continue.";
 
       return defaultText;
     }
-
 
     // Concat characters
     if (answerQuestionLower) {
@@ -56,8 +54,6 @@ function writePassword() {
       answerString = answerString + specialChars;
     }
 
-    // console.log(answerString);
-
     // Loop for password
     randomized = "";
 
@@ -66,9 +62,6 @@ function writePassword() {
     }
     return randomized;
   }
-
-
-  console.log(randomized);
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
