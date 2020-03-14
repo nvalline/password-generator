@@ -43,6 +43,7 @@ All functionality is javascript based.
 #### Installation
 
 Open this link to view the Password Generator.
+- [View Site](https://nvalline.github.io/password-generator/)
 
 #### API Reference
 
@@ -71,6 +72,10 @@ button[disabled] {
 ---
 
 ## References
+
+- Nate Valline
+- [W3Schools](https://www.w3schools.com/)
+- [Google](https://www.google.com)
 
 [Back To The Top](#project-name)
 
