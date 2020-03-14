@@ -27,19 +27,20 @@ function writePassword() {
 
     if (charLength >= 8 && charLength <= 128) {
       charLength;
+      // Validate at least one option is true
+      do {
+        var answerQuestionLower = confirm(questionLower);
+        var answerQuestionUpper = confirm(questionUpper);
+        var answerQuestionNum = confirm(questionNum);
+        var answerQuestionSpecChar = confirm(questionSpecChar);
+      } while (answerQuestionLower !== true && answerQuestionUpper !== true && answerQuestionNum !== true && questionSpecChar !== true);
     } else {
-      charLength = prompt(questionLength);
+      // charLength = prompt(questionLength);
+      var defaultText = "Please enter a valid number in prompt to continue.";
+
+      return defaultText;
     }
 
-    // console.log(charLength);
-
-    // Validate at least one option is true
-    do {
-      var answerQuestionLower = confirm(questionLower);
-      var answerQuestionUpper = confirm(questionUpper);
-      var answerQuestionNum = confirm(questionNum);
-      var answerQuestionSpecChar = confirm(questionSpecChar);
-    } while (answerQuestionLower !== true && answerQuestionUpper !== true && answerQuestionNum !== true && questionSpecChar !== true);
 
     // Concat characters
     if (answerQuestionLower) {
