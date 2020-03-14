@@ -61,11 +61,11 @@ function writePassword() {
     randomized = "";
 
     for (var i = 0; i < charLength; i++) {
-      randomized = answerString[Math.floor(Math.random() * answerString.length)];
+      randomized = randomized + answerString[Math.floor(Math.random() * answerString.length)];
     }
-
     return randomized;
   }
+
 
   console.log(randomized);
 
@@ -74,7 +74,6 @@ function writePassword() {
 
   passwordText.value = password;
 
-  console.log(password);
 }
 
 
